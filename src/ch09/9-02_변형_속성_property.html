@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #graph {
+      width: 610px;
+      border: 3px solid black;
+    }
+
+    .bar {
+      width: 10px;
+      height: 50px;
+      background-color: orange;
+      margin: 5px;
+
+      transition-property: background-color, width;
+      transition-duration: 1s, 5s;
+    }
+
+    #graph:hover>.bar:nth-child(1) {
+      background-color: red;
+      width: 100px;
+    }
+
+    #graph:hover>.bar:nth-child(2) {
+      background-color: blue;
+      width: 300px;
+    }
+
+    #graph:hover>.bar:nth-child(3) {
+      background-color: green;
+      width: 400px;
+    }
+
+    #graph:hover>.bar:nth-child(4) {
+      background-color: yellow;
+      width: 200px;
+    }
+
+    #graph:hover>.bar:nth-child(5) {
+      background-color: pink;
+      width: 400px;
+    }
+
+    #graph:hover>.bar {
+      width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS3 Transition Graph</h1>
+  <div id="graph">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</body>
+
+</html>
