@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 960px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template: 70px 1fr 70px / 200px 1fr;
+      grid-gap: 5px;
+      grid-template-areas:
+        'header header'
+        'aside content'
+        'footer footer';
+    }
+
+    [class*=cell] {
+      box-sizing: border-box;
+      border: 5px solid black;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .cell-header {
+      grid-area: 'header';
+    }
+
+    .cell-aside {
+      grid-area: 'aside';
+    }
+
+    .cell-content {
+      grid-area: 'content';
+
+    }
+
+    .cell-footer {
+      grid-area: 'footer';
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cell-header">
+      <h1>Header</h1>
+    </div>
+    <div class="cell-aside">
+      <h2>Aside</h2>
+      <p>Lorem ipsum</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolorum sequi voluptatum eligendi,
+        reprehenderit illum magni amet repudiandae. Nulla obcaecati exercitationem fugiat ipsam labore debitis sint
+        atque veniam, officiis nisi.</p>
+    </div>
+    <div class="cell-content">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta reprehenderit et vero. Nemo earum voluptatum
+        animi totam magni laudantium id nostrum libero. Inventore, quasi qui delectus rerum possimus aliquam odio?</p>
+    </div>
+    <div class="cell-footer">
+      <h1>Footer</h1>
+    </div>
+  </div>
+</body>
+
+</html>
